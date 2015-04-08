@@ -4,10 +4,10 @@ from settings import FEINCMS_GRID_TOTAL_COLUMNS
 
 
 class GridContent(models.Model):
-    grid_columns = models.PositiveSmallIntegerField('Columns', blank=True, help_text='How many columns of the total (%s) this content will span.' % FEINCMS_GRID_TOTAL_COLUMNS)
-    grid_offset = models.PositiveSmallIntegerField('Offset', blank=True, help_text='Offset to the right this many columns.')
-    grid_push = models.PositiveSmallIntegerField('Push', blank=True, help_text='Source ordering - push this content this many columns to the right.')
-    grid_pull = models.PositiveSmallIntegerField('Pull', blank=True, help_text='Source ordering - pull this content this many columns to the left.')
+    grid_columns = models.PositiveSmallIntegerField('Columns', blank=True, null=True, help_text='How many columns of the total (%s) this content will span.' % FEINCMS_GRID_TOTAL_COLUMNS)
+    grid_offset = models.PositiveSmallIntegerField('Offset', blank=True, null=True, help_text='Offset to the right this many columns.')
+    grid_push = models.PositiveSmallIntegerField('Push', blank=True, null=True, help_text='Source ordering - push this content this many columns to the right.')
+    grid_pull = models.PositiveSmallIntegerField('Pull', blank=True, null=True, help_text='Source ordering - pull this content this many columns to the left.')
     grid_extra_classes = models.CharField('Extra classes', max_length=255, blank=True, help_text='Manual class definitions, e.g.: centered, large-X, small-X, etc.')
 
     class Meta:
