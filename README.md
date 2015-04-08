@@ -1,5 +1,5 @@
 # FeinCMS Grid
-An app that integrates Foundation grid with FeinCMS contenttypes.
+An app that integrates Foundation grid with FeinCMS contenttypes. Currently only for Foundation, but other frameworks grid syntax is so similar, I'll likely expand this to handle multiple grid systems later.
 
 ###Installation
 
