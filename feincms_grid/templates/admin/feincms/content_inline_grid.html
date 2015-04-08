@@ -1,0 +1,30 @@
+<div style="padding: 10px 10px 10px 10px;">
+    <fieldset style='border: 1px solid #ccc;'><h2><span class="modname">Grid:</span> &nbsp;(<span class="collapse collapsed">Show</span>)</h2><div class="item-content collapsed" style='display:none;'>
+            {% for fieldset in grid_form %}
+                {% for line in fieldset %}
+                    {% for field in line %}
+                    <div class="form-row{% if line.errors %} errors{% endif %}{% for field in line %} {{ field.field.name }}{% endfor %}">
+                        {{ line.errors }}
+                        <div{% if not line.fields|length_is:"1" %} class="field-box"{% endif %}>
+                            {% if field.is_checkbox %}
+                                {{ field.field }}{{ field.label_tag }}
+                            {% else %}
+                                {{ field.label_tag }}
+                                {% if field.is_readonly %}
+                                    <p>{{ field.contents }}</p>
+                                {% else %}
+                                    {{ field.field }}
+                                {% endif %}
+                            {% endif %}
+                            {% if field.field.field.help_text %}
+                                <p class="help">{{ field.field.field.help_text|safe }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+    </fieldset>
+</div>
+ 
