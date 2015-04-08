@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 from feincms_grid import __version__ as version
 import os
 
-README = os.path.join(os.path.dirname(__file__), 'README.md')
+README = os.path.join(os.path.dirname(__file__), 'README')
 
 with open(README) as fobj:
     long_description = fobj.read()
