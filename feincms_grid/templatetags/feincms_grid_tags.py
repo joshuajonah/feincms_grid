@@ -10,7 +10,7 @@ register = template.Library()
 @register.simple_tag(takes_context=True)
 def feincms_grid_render_region(context, feincms_object, region, request=None):
     """
-    {% feincms_render_region feincms_page "main" request %}
+    {% feincms_grid_render_region feincms_page "main" request %}
     """
     full_content = ''
     partial_content = ''
