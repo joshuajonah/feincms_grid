@@ -4,8 +4,9 @@ An app that integrates Foundation grid with FeinCMS contenttypes. Currently only
 ###Installation
 
 1. Install Foundation 5 and be sure it is working properly before getting into this package.
-2. Add `'feincms_grid'` to your `INSTALLED_APPS` setting.
-3. Add `FEINCMS_GRID_TOTAL_COLUMNS` to your settings if you want to override the total column amount (default is 12).
+2. Run `pip install feincms-grid`.
+3. Add `'feincms_grid'` to your `INSTALLED_APPS` setting.
+4. Add `FEINCMS_GRID_TOTAL_COLUMNS` to your settings if you want to override the total column amount (default is 12).
 
 ###Configuration
 
