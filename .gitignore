@@ -1,3 +1,4 @@
 *.DS_Store
 *.pyc
-
+feincms_grid.egg-info
+/dist/
