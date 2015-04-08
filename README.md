@@ -37,4 +37,4 @@ If you want to change the `render` method of the content type, be sure to call t
 
 Any content types which are subclasses of `GridContent` will have an extra dropdown at the top of them:
 
-![alt tag](https://raw.github.com/username/projectname/branch/path/to/img.png)
+![usage preview](https://raw.github.com/username/projectname/feincms_grid.png)
