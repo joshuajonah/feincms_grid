@@ -6,7 +6,7 @@ An app that integrates Foundation grid with FeinCMS contenttypes.
 1. Install Foundation 5 and be sure it is working properly before getting into this package.
 2. Add `'feincms_grid'` to your `INSTALLED_APPS` setting.
 
-###Usage
+###Configuration
 
 Just subclass `GridContent` when creating a content type:
 
@@ -32,3 +32,9 @@ If you want to change the `render` method of the content type, be sure to call t
             rendered = markdown.markdown(rendered)
             self.rendered = mark_safe(rendered)
             return super(MarkdownContent, self).render(**kwargs)
+
+###Usage
+
+Any content types which are subclasses of `GridContent` will have an extra dropdown at the top of them:
+
+![alt tag](https://raw.github.com/username/projectname/branch/path/to/img.png)
