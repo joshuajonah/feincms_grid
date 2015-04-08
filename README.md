@@ -4,7 +4,7 @@ An app that integrates Foundation grid with FeinCMS contenttypes.
 ###Installation
 
 1. Install Foundation 5 and be sure it is working properly before getting into this package.
-2. Add `'feincms_grid'` to your `INSTALLED_APPS` setting
+2. Add `'feincms_grid'` to your `INSTALLED_APPS` setting.
 
 ###Usage
 
