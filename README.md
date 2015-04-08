@@ -37,4 +37,4 @@ If you want to change the `render` method of the content type, be sure to call t
 
 Any content types which are subclasses of `GridContent` will have an extra dropdown at the top of them:
 
-![usage preview](https://raw.github.com/joshuajonah/feincms_grid/blob/master/feincms_grid.png)
+![usage preview](https://github.com/joshuajonah/feincms_grid/blob/master/feincms_grid.png)
