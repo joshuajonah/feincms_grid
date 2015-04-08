@@ -33,6 +33,9 @@ def feincms_grid_render_region(context, feincms_object, region, request=None):
 
     	else:
     		full_content += _render_content(content, request=request, context=context)
+
+    if partial_content:
+        full_content += "<div class='row'>%s</div>" % partial_content
     	
     return full_content
    
