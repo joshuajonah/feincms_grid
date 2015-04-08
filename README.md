@@ -9,6 +9,8 @@ An app that integrates Foundation grid with FeinCMS contenttypes.
 
 ###Configuration
 
+#####Content types
+
 Just subclass `GridContent` when creating a content type:
 
     from feincms_grid.models import GridContent
@@ -37,6 +39,17 @@ If you want to change the `render` method of the content type, be sure to call t
             rendered = markdown.markdown(rendered)
             self.rendered = mark_safe(rendered)
             return super(MarkdownContent, self).render(**kwargs)
+
+#####Templates
+
+Use the `feincms_grid_render_region` tag to render regions in your templates.
+
+    {% extends 'base.html' %}
+	{% load feincms_page_tags feincms_grid_tags %}
+
+	{% block content %}
+		{% feincms_grid_render_region feincms_page "main" request %}
+	{% endblock %}
 
 ###Usage
 
