@@ -16,7 +16,7 @@ Just subclass `GridContent` when creating a content type:
         class Meta:
             abstract = True
             
-If you want to change the `render` method of the content type, be sure to call the super method to have the content wrapped with the tags:
+If you want to change the `render` method of the content type, be sure to call the `super` method to have the content wrapped with the tags:
 
     class MarkdownContent(GridContent):
         content = models.TextField()
