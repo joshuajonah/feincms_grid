@@ -5,10 +5,13 @@ An app that integrates Foundation grid with FeinCMS contenttypes.
 
 1. Install Foundation 5 and be sure it is working properly before getting into this package.
 2. Add `'feincms_grid'` to your `INSTALLED_APPS` setting.
+3. Add `FEINCMS_GRID_TOTAL_COLUMNS` to your settings if you want to override the total column amount (default is 12).
 
 ###Configuration
 
 Just subclass `GridContent` when creating a content type:
+
+    from feincms_grid.models import GridContent
 
     class RawTextContent(GridContent):
         content = models.TextField()
@@ -17,6 +20,8 @@ Just subclass `GridContent` when creating a content type:
             abstract = True
             
 If you want to change the `render` method of the content type, be sure to call the `super` method to have the content wrapped with the tags:
+
+    from feincms_grid.models import GridContent
 
     class MarkdownContent(GridContent):
         content = models.TextField()
