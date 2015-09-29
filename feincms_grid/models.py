@@ -19,7 +19,6 @@ class GridContent(models.Model):
         """
 
         classes = []
-        print self.grid_columns
         if self.grid_columns:
         	classes.append('large-%s columns' % self.grid_columns)
         if self.grid_offset:
