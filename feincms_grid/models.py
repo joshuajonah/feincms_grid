@@ -17,17 +17,17 @@ class GridContent(models.Model):
         """
         Render implimentation that attempts to add CSS grid classes to the final output.
         """
-
         classes = []
         if self.grid_columns:
-        	classes.append('large-%s columns' % self.grid_columns)
+            classes.append('large-%s columns' % self.grid_columns)
         if self.grid_offset:
-        	classes.append('large-offset-%s' % self.grid_offset)
+            classes.append('large-offset-%s' % self.grid_offset)
         if self.grid_push:
-        	classes.append('large-push-%s' % self.grid_push)
+            classes.append('large-push-%s' % self.grid_push)
         if self.grid_pull:
-        	classes.append('large-pull-%s' % self.grid_pull)
+            classes.append('large-pull-%s' % self.grid_pull)
         if self.grid_extra_classes:
-        	for c in self.grid_extra_classes.split(' '):
-        		classes.append(c)
-        return "<div class='%s'>%s</div>" % (' '.join(classes), super(GridContent, self).render(**kwargs))
+            for c in self.grid_extra_classes.split(' '):
+                classes.append(c)
+
+        return "<div class='%s'>%s</div>" % (' '.join(classes), self.content)

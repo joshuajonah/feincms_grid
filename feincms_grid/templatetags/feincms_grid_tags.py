@@ -45,6 +45,7 @@ class GridBuilder(object):
     def render(self):
         for item in self.items:
             rendered = _render_content(item, request=self.request, context=self.context)
+            
             # In case you try to render a contenttype that isn't a subclass of GridContent.
             try:
                 if item.grid_columns:
