@@ -19,6 +19,7 @@ class GridContent(models.Model):
         """
 
         classes = []
+        print self.grid_columns
         if self.grid_columns:
         	classes.append('large-%s columns' % self.grid_columns)
         if self.grid_offset:
@@ -30,5 +31,4 @@ class GridContent(models.Model):
         if self.grid_extra_classes:
         	for c in self.grid_extra_classes.split(' '):
         		classes.append(c)
-
-        return "<div class='%s'>%s</div>" % (' '.join(classes), self.rendered)
+        return "<div class='%s'>%s</div>" % (' '.join(classes), super(GridContent, self).render(**kwargs))

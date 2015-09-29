@@ -48,7 +48,6 @@ class GridBuilder(object):
             # In case you try to render a contenttype that isn't a subclass of GridContent.
             try:
                 if item.grid_columns:
-
                     # Add current column to the total combined row columns.
                     item_columns = item.grid_columns
                     if item.grid_offset:
