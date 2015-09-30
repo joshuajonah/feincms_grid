@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.safestring import mark_safe
 
 from settings import FEINCMS_GRID_TOTAL_COLUMNS
 
@@ -30,4 +31,4 @@ class GridContent(models.Model):
             for c in self.grid_extra_classes.split(' '):
                 classes.append(c)
 
-        return "<div class='%s'>%s</div>" % (' '.join(classes), self.content)
+        return mark_safe("<div class='%s'>%s</div>" % (' '.join(classes), self.content))
