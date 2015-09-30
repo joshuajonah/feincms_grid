@@ -38,8 +38,8 @@ If you want to change the `render` method of the content type, be sure to call t
             c = Context({})
             rendered = t.render(c)
             rendered = markdown.markdown(rendered)
-            self.rendered = mark_safe(rendered)
-            return super(MarkdownContent, self).render(**kwargs)
+            self.content = mark_safe(rendered)
+            return super(MarkdownContent, self).render(*args, **kwargs)
 
 #####Templates
 

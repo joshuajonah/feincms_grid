@@ -9,7 +9,7 @@ with open(README) as fobj:
 
 setup(name="feincms-grid",
     version=version,
-    description="Integrate CSS grids with FeinCMS contenttypes",
+    description="Integrate Foundation columns with FeinCMS contenttypes",
     long_description=long_description,
     classifiers=[
         'Development Status :: 3 - Alpha',
